@@ -1,6 +1,6 @@
 import * as mongoose from "mongoose";
-import Category from "../Models/Category";
-import Product from '../Models/Product';
+import Category from "../Models/Category.js";
+import Product from '../Models/Product.js';
 
 export const createNewProduct = async (req, res) => {
     try {

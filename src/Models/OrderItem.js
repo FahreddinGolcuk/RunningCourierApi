@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import {product} from "./Product";
+import {product} from "./Product.js";
 
 export const orderItem = new mongoose.Schema({
     piece: Number,

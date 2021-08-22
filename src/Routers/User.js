@@ -1,6 +1,6 @@
 import express from 'express';
-import {createUser, getUsers, login} from '../Controllers/User';
-import {authenticateJWT} from "../Core/Auth";
+import {createUser, getUsers, login} from '../Controllers/User.js';
+import {authenticateJWT} from "../Core/Auth.js";
 const router = express.Router();
 
 router.get('/', authenticateJWT, getUsers);

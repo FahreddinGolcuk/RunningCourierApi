@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
-import {generateAccessToken, generateRefreshToken} from "../Core/Auth";
-import {hashPassword, verifyPassword} from "../Functions/Security";
-import User from '../Models/User';
+import {generateAccessToken, generateRefreshToken} from "../Core/Auth.js";
+import {hashPassword, verifyPassword} from "../Functions/Security.js";
+import User from '../Models/User.js';
 
 export const getUsers = async (req, res) => {
     try {

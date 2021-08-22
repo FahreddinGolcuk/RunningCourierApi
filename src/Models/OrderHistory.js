@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Order from "./Order";
+import Order from "./Order.js";
 
 const orderHistory = new mongoose.Schema({
     orders: [Order],

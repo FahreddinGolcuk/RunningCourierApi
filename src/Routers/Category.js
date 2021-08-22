@@ -1,6 +1,6 @@
 import express from 'express';
-import {createNewCategory, getCategories} from '../Controllers/Category';
-import {authenticateJWT} from "../Core/Auth";
+import {createNewCategory, getCategories} from '../Controllers/Category.js';
+import {authenticateJWT} from "../Core/Auth.js";
 const router = express.Router();
 
 router.post('/create', authenticateJWT, createNewCategory);
