@@ -5,12 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "postinstall": "npm run build",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "engines": {
-    "node": "15.x"
   },
   "repository": {
     "type": "git",
