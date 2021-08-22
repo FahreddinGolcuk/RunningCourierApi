@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "An awesome delivery application",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "postinstall": "npm run build",
     "build": "tsc",
