@@ -35,3 +35,20 @@ export const getFavoriteProducts = async (req, res) => {
         res.status(400).json({message: e.message});
     }
 };
+
+export const getProduct = async (req, res) => {
+    try {
+        let product = null
+        const categories = await Category.find();
+        categories.forEach((category) => {
+            let finded = category['products'].find( item => item.id === '611b58de6f433a4b49f6d663' )
+            if(finded){
+                product = finded
+                return;
+            }
+        });
+        res.status(200).json(product);
+    } catch (e) {
+        res.status(400).json({message: e.message});
+    }
+};
