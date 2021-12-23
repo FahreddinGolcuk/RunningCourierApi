@@ -4,5 +4,5 @@ const router = express.Router();
 
 router.post('/create', createNewProduct);
 router.get('/favorites', getFavoriteProducts);
-router.get('/getProduct', getProduct);
+router.post('/getProduct', getProduct);
 export default router;

@@ -37,11 +37,12 @@ export const getFavoriteProducts = async (req, res) => {
 };
 
 export const getProduct = async (req, res) => {
+    const { productId } = req.body
     try {
         let product = null
         const categories = await Category.find();
         categories.forEach((category) => {
-            let finded = category['products'].find( item => item.id === '611b58de6f433a4b49f6d663' )
+            let finded = category['products'].find( item => item.id === productId )
             if(finded){
                 product = finded
                 return;
