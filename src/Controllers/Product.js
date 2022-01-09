@@ -53,3 +53,12 @@ export const getProduct = async (req, res) => {
         res.status(400).json({message: e.message});
     }
 };
+
+export const getCategoryProducts = async (req, res) => {
+    try {
+        const products = await Category.findOne({_id: req.query.id});
+        res.status(200).json(products['products']);
+    } catch (e) {
+        res.status(400).json({message: e.message});
+    }
+};

@@ -13,7 +13,12 @@ export const createNewCategory = async (req, res) => {
 export const getCategories = async (req, res) => {
     try {
         const categories = await Category.find();
-        res.status(200).json(categories);
+        let mapped = categories.map(category => ({
+            _id: category._id,
+            name: category.name,
+            image: category.image
+        }))
+        res.status(200).json(mapped);
     } catch (e) {
         res.status(400).json({message: e.message});
     }
